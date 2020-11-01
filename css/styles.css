@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/estrellas1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.card {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 53, 1) 100%
+  );
+  padding: 2rem;
+}
+
+.card:hover img {
+  left: 80%;
+  height: 450px;
+}
+
+.card .content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  opacity: 0;
+}
+
+.card:hover .content {
+  left: 0;
+  opacity: 1;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+p {
+  color: #fafafa;
+  font-size: 12px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+a {
+  color: #111;
+  background-color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px 2rem;
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  transition: 0.7s;
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: auto;
+    max-width: 600px;
+    transition: 0.5s;
+    align-items: flex-start;
+  }
+
+  .card:hover {
+    height: 500px;
+  }
+
+  .card:hover img {
+    left: 50%;
+    height: 250px;
+  }
+
+  .card .content {
+    width: 100%;
+    left: 0;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.card::before {
+  position: absolute;
+  content: "Empecemos";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  background-color: #111;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 1000;
+}
